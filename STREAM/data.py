@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 
+st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide")
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
