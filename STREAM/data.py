@@ -8,7 +8,7 @@ st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
 
 with st.sidebar:
-    selected=option_menu(menu_title="Main Menu",options=["Home","Data-set","Data Cleaning","Data Visualization","📦 Sales Overview", "👥 Customer Analysis", "🚚 Shipping Analysis", "📈 Time Trends","About"],icons=["house","table","bar-chart","graph-up-arrow","","","","","person"],default_index=0)
+    selected=option_menu(menu_title="Dashboard",options=["Home","Data-set","Data Cleaning","Data Visualization","📦 Sales Overview", "👥 Customer Analysis", "🚚 Shipping Analysis", "📈 Time Trends","About"],icons=["house","table","bar-chart","graph-up-arrow","","","","","person"],default_index=0)
 
 
 if selected=="Home":
