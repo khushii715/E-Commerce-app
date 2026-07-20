@@ -3,7 +3,24 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 
+# Dark theme force
+st.markdown("""
+<style>
+    .stApp {
+        background-color: #0e1117;
+        color: #fafafa;
+    }
+    .css-1d391kg, .css-1v0mbdj {
+        background-color: #0e1117;
+    }
+    h1, h2, h3, h4, h5, h6, p, label, span {
+        color: #fafafa !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide")
+
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
