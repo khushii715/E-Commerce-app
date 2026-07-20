@@ -7,10 +7,38 @@ st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
 st.markdown("""
 <style>
+    /* Background */
     .stApp {background-color: #0e1117;}
-    h1, h2, h3, h4, h5, h6 {color: #00D4AA !important;}  /* Teal headings */
-    p, div, span, label {color: #E0E0E0 !important;}     /* White text */
-    .css-1d391kg {background-color: #1a1f2e !important;} /* Sidebar */
+    [data-testid="stSidebar"] {background-color: #161a23;}
+    
+    /* Text Color */
+    h1, h2, h3, h4, h5, h6 {color: #00D4AA !important;} /* Teal Headings */
+    p, div, span, label, li {color: #E0E0E0 !important;} /* Light Grey Text */
+    
+    /* Menu / Buttons */
+    .stButton>button {
+        background-color: #1f2937;
+        color: #E0E0E0;
+        border: 1px solid #00D4AA;
+    }
+    .stButton>button:hover {
+        background-color: #00D4AA;
+        color: #0e1117;
+    }
+    
+    /* Table / Dataframe */
+    .stDataFrame {background-color: #161a23;}
+    div[data-testid="stDataFrame"] * {color: #E0E0E0 !important;}
+    
+    /* Metrics Cards */
+    [data-testid="stMetric"] {
+        background-color: #161a23;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #1f2937;
+    }
+    [data-testid="stMetricLabel"] {color: #9CA3AF !important;}
+    [data-testid="stMetricValue"] {color: #00D4AA !important;}
 </style>
 """, unsafe_allow_html=True)
 st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide")
