@@ -1,17 +1,12 @@
 import streamlit as st
 import pandas as pd
-# import matplotlib.pyplot as plt
-# import seaborn as sns
 import plotly.express as px
-# import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
 
 
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
-
-df = pd.read_csv("E_commerce_sales_data.csv")
-
+df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
 
 with st.sidebar:
     selected=option_menu(menu_title="Main Menu",options=["Home","Data-set","Data Cleaning","Data Visualization","📦 Sales Overview", "👥 Customer Analysis", "🚚 Shipping Analysis", "📈 Time Trends","About"],icons=["house","table","bar-chart","graph-up-arrow","","","","","person"],default_index=0)
@@ -130,8 +125,7 @@ elif selected=="Data Visualization":
         st.plotly_chart(fig2, use_container_width=True)
     
     st.markdown("---")
-
-    # 3. GUIDE BOX
+    
     st.info("👈 *Tip*: Select an analysis from the left sidebar to view detailed insights on Sales, Customers, Shipping, and Trends")
     
 elif selected=="📦 Sales Overview":
