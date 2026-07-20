@@ -6,6 +6,16 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
+ # Dark theme force
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0e1117;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
 
 with st.sidebar:
