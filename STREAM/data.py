@@ -5,6 +5,27 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
+# Force Dark Theme
+st.markdown("""
+<style>
+    body {
+        background-color: #0e1117;
+        color: #FA;
+    }
+    .stApp {
+        background-color: #0e1117;
+    }
+    .css-1d391kg, .css-12w0qpk {
+        background-color: #262730;
+    }
+    h1, h2, h3, h4, h5, h6, p, div, span, label {
+        color: #FAFA !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide")
+
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
 
 with st.sidebar:
