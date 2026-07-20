@@ -11,8 +11,14 @@ st.markdown("""
     .stApp {background-color: #0e1117 !important;}
     
     /* Sidebar Dark */
-    [data-testid="stSidebar"] {background-color: #161a23 !important;}
-    [data-testid="stSidebar"] * {color: #E0E0E0 !important;}
+    section[data-testid="stSidebar"] {background-color: #161a23 !important;}
+    section[data-testid="stSidebar"] * {color: #E0E0E0 !important;}
+    
+    /* Selected Menu Item - Red ki jagah Teal */
+    [data-testid="stSidebarNavItems"] [aria-selected="true"] {
+        background-color: #00D4AA !important;
+        color: #0e1117 !important;
+    }
     
     /* Headings */
     h1, h2, h3, h4, h5, h6 {color: #00D4AA !important;}
@@ -20,21 +26,23 @@ st.markdown("""
     /* All Text */
     p, div, span, label, li {color: #E0E0E0 !important;}
     
-    /* Table Dark */
-    .stDataFrame, .stDataFrame div {background-color: #161a23 !important;}
+    /* Table/Dataframe Dark */
+    .stDataFrame {background-color: #161a23 !important;}
     .stDataFrame * {color: #E0E0E0 !important; border-color: #2a2f3f !important;}
     
     /* Metric Cards */
     [data-testid="stMetric"] {
-        background-color: #161a23;
+        background-color: #161a23 !important;
         padding: 15px;
         border-radius: 10px;
         border: 1px solid #2a2f3f;
     }
     [data-testid="stMetricValue"] {color: #00D4AA !important;}
+    [data-testid="stMetricLabel"] {color: #9CA3AF !important;}
     
-    /* Hide Light/Dark toggle */
-    #MainMenu {visibility: hidden;}
+    /* Tabs */
+    button[data-baseweb="tab"] {color: #9CA3AF !important;}
+    button[data-baseweb="tab"][aria-selected="true"] {color: #00D4AA !important;}
 </style>
 """, unsafe_allow_html=True)
 
