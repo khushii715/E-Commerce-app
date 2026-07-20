@@ -1,4 +1,4 @@
-Streamlit
-Pandas
-Plotly Express
-Streamlit Option Menu
+streamlit
+pandas
+plotly express
+streamlit-option-menu
