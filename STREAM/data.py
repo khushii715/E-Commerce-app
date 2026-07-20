@@ -5,43 +5,42 @@ from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Analysis", page_icon="📊", layout="wide")
 
+ Dark Theme 
 st.markdown("""
 <style>
-    /* Background */
-    .stApp {background-color: #0e1117;}
-    [data-testid="stSidebar"] {background-color: #161a23;}
+    /* Main Background */
+    .stApp {background-color: #0e1117 !important;}
     
-    /* Text Color */
-    h1, h2, h3, h4, h5, h6 {color: #00D4AA !important;} /* Teal Headings */
-    p, div, span, label, li {color: #E0E0E0 !important;} /* Light Grey Text */
+    /* Sidebar Dark */
+    [data-testid="stSidebar"] {background-color: #161a23 !important;}
+    [data-testid="stSidebar"] * {color: #E0E0E0 !important;}
     
-    /* Menu / Buttons */
-    .stButton>button {
-        background-color: #1f2937;
-        color: #E0E0E0;
-        border: 1px solid #00D4AA;
-    }
-    .stButton>button:hover {
-        background-color: #00D4AA;
-        color: #0e1117;
-    }
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {color: #00D4AA !important;}
     
-    /* Table / Dataframe */
-    .stDataFrame {background-color: #161a23;}
-    div[data-testid="stDataFrame"] * {color: #E0E0E0 !important;}
+    /* All Text */
+    p, div, span, label, li {color: #E0E0E0 !important;}
     
-    /* Metrics Cards */
+    /* Table Dark */
+    .stDataFrame, .stDataFrame div {background-color: #161a23 !important;}
+    .stDataFrame * {color: #E0E0E0 !important; border-color: #2a2f3f !important;}
+    
+    /* Metric Cards */
     [data-testid="stMetric"] {
         background-color: #161a23;
-        padding: 10px;
+        padding: 15px;
         border-radius: 10px;
-        border: 1px solid #1f2937;
+        border: 1px solid #2a2f3f;
     }
-    [data-testid="stMetricLabel"] {color: #9CA3AF !important;}
     [data-testid="stMetricValue"] {color: #00D4AA !important;}
+    
+    /* Hide Light/Dark toggle */
+    #MainMenu {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
-st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide")
+
+st.set_page_config(page_title="E-Commerce Sales Dashboard", layout="wide", initial_sidebar_state="expanded")
+    
 
 df = pd.read_csv("STREAM/E_commerce_sales_data.csv")
 
